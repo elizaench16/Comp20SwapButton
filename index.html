@@ -1,0 +1,38 @@
+<!--COMP 20 Fall 2020
+    JS Extra Credit
+    Eliza Encherman
+-->
+
+<!DOCTYPE html>
+
+<html>
+ <head>
+     <title>Swap</title>
+ </head>
+<body>
+ <form>
+    <input type="text" value="Your text here" id="left"/>
+    <input type="button" value="-->" id="swap"/>
+    <input type="text" value="" id="right"/>
+ </form>
+
+ <script>
+     window.onload = document.getElementById("swap").addEventListener("click", function () {swap();});
+     
+     var swapArrow = "<--";
+
+     function swap() {
+        var leftHelper = document.getElementById("left").value;
+        var rightHelper = document.getElementById("right").value;
+
+        document.getElementById("left").value = rightHelper;
+        document.getElementById("right").value = leftHelper;
+
+        var arrowHelper = document.getElementById("swap").value;
+        document.getElementById("swap").value = swapArrow;
+        swapArrow = arrowHelper;
+     }
+
+ </script>
+</body>
+</html>
